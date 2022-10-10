@@ -8,8 +8,8 @@ import (
 	"github.com/Mynoveloper/logger"
 	"go.mongodb.org/mongo-driver/mongo"
 
-	"github.com/Mynor2397/Mongo-Quick-Start/internal/app/router"
-	"github.com/Mynor2397/Mongo-Quick-Start/internal/infrastructure/utils"
+	"github.com/Mynor2397/Api-Template/internal/app/router"
+	"github.com/Mynor2397/Api-Template/internal/infrastructure/utils"
 )
 
 type httpServe struct {

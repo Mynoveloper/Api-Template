@@ -5,7 +5,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/Mynor2397/Mongo-Quick-Start/internal/domain/model"
+	"github.com/Mynor2397/Api-Template/internal/domain/model"
 )
 
 // Config del servidor

@@ -6,10 +6,10 @@ import (
 
 	"github.com/Mynoveloper/logger"
 
-	"github.com/Mynor2397/Mongo-Quick-Start/internal/app/controller"
-	"github.com/Mynor2397/Mongo-Quick-Start/internal/app/controller/menu"
-	"github.com/Mynor2397/Mongo-Quick-Start/internal/domain/service"
-	"github.com/Mynor2397/Mongo-Quick-Start/internal/infrastructure/repository"
+	"github.com/Mynor2397/Api-Template/internal/app/controller"
+	"github.com/Mynor2397/Api-Template/internal/app/controller/menu"
+	"github.com/Mynor2397/Api-Template/internal/domain/service"
+	"github.com/Mynor2397/Api-Template/internal/infrastructure/repository"
 )
 
 func menuRoutes(logger logger.ILogger,

@@ -5,8 +5,8 @@ import (
 	"github.com/gorilla/mux"
 	"go.mongodb.org/mongo-driver/mongo"
 
-	"github.com/Mynor2397/Mongo-Quick-Start/internal/app/controller"
-	"github.com/Mynor2397/Mongo-Quick-Start/internal/app/middleware"
+	"github.com/Mynor2397/Api-Template/internal/app/controller"
+	"github.com/Mynor2397/Api-Template/internal/app/middleware"
 )
 
 func InitRoutes(logger logger.ILogger, database *mongo.Database) *mux.Router {

@@ -7,7 +7,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 
-	"github.com/Mynor2397/Mongo-Quick-Start/internal/domain/model"
+	"github.com/Mynor2397/Api-Template/internal/domain/model"
 )
 
 type menuRepository struct {

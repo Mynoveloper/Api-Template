@@ -8,7 +8,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 
-	"github.com/Mynor2397/Mongo-Quick-Start/internal/infrastructure/helper"
+	"github.com/Mynor2397/Api-Template/internal/infrastructure/helper"
 	"github.com/Mynoveloper/logger"
 )
 

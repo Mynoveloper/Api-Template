@@ -3,9 +3,9 @@ package menu
 import (
 	"net/http"
 
-	"github.com/Mynor2397/Mongo-Quick-Start/internal/app/controller"
-	"github.com/Mynor2397/Mongo-Quick-Start/internal/domain/model"
-	"github.com/Mynor2397/Mongo-Quick-Start/internal/domain/service"
+	"github.com/Mynor2397/Api-Template/internal/app/controller"
+	"github.com/Mynor2397/Api-Template/internal/domain/model"
+	"github.com/Mynor2397/Api-Template/internal/domain/service"
 	"github.com/Mynoveloper/logger"
 )
 

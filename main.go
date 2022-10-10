@@ -6,13 +6,13 @@ import (
 	"github.com/Mynoveloper/logger"
 	"github.com/joho/godotenv"
 
-	"github.com/Mynor2397/Mongo-Quick-Start/internal/cmd/server"
-	"github.com/Mynor2397/Mongo-Quick-Start/internal/infrastructure/database"
+	"github.com/Mynor2397/Api-Template/internal/cmd/server"
+	"github.com/Mynor2397/Api-Template/internal/infrastructure/database"
 )
 
 func main() {
 	logger := logger.NewLogger(logger.LoggerInfo{
-		ProgramName: "MongoQuick",
+		ProgramName: "ApiTemplate",
 		Level:       "debug",
 		JSONOutput:  true,
 	})
