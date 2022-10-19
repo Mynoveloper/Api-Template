@@ -11,24 +11,26 @@ import (
 // var emptyArray = [...]string{}
 // var emptyObject = make(map[string]string)
 
-type httpResponse struct{}
-type IHttpResponse interface {
+type httpResponse struct {
+	logger logger.ILogger
+}
+
+type HttpResponse interface {
 	Respond(w http.ResponseWriter, value interface{}, statusCode int)
 	RespondError(w http.ResponseWriter, err interface{})
 }
 
-var _logger logger.ILogger
-
-func NewResponse(logger logger.ILogger) IHttpResponse {
-	_logger = logger
-	return &httpResponse{}
+func NewResponse(logger logger.ILogger) HttpResponse {
+	return &httpResponse{
+		logger: logger,
+	}
 }
 
-func (c *httpResponse) Respond(w http.ResponseWriter, value interface{}, statuscode int) {
+func (r *httpResponse) Respond(w http.ResponseWriter, value interface{}, statuscode int) {
 	b, err := json.Marshal(value)
 
 	if err != nil {
-		c.RespondError(w, fmt.Errorf("No se puede obtener la respuesta: %v", err))
+		r.RespondError(w, fmt.Errorf("No se puede obtener la respuesta: %v", err))
 		return
 	}
 
@@ -36,8 +38,8 @@ func (c *httpResponse) Respond(w http.ResponseWriter, value interface{}, statusc
 	w.Write(b)
 }
 
-func (c *httpResponse) RespondError(w http.ResponseWriter, err interface{}) {
-	_logger.Error(err)
+func (r *httpResponse) RespondError(w http.ResponseWriter, err interface{}) {
+	r.logger.Error(err)
 
 	http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 }

@@ -7,19 +7,19 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 
-	"github.com/Mynor2397/Api-Template/internal/domain/model"
+	"github.com/Mynor2397/Api-Template/src/domain/model"
 )
 
 type menuRepository struct {
 	database *mongo.Database
 }
 
-type IMenuRepository interface {
+type MenuRepository interface {
 	NewMenu() error
 	GetAll(contex context.Context) (*model.Menus, error)
 }
 
-func NewMenuRepository(database *mongo.Database) IMenuRepository {
+func NewMenuRepository(database *mongo.Database) MenuRepository {
 	return &menuRepository{
 		database: database,
 	}

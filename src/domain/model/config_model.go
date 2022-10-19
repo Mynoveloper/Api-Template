@@ -1,6 +1,6 @@
 package model
 
-// Config es la configuracion del servidor
+// Config is the basic parametrization to configurate the program
 type Config struct {
 	ApplicationPort string
 	Hostdb          string

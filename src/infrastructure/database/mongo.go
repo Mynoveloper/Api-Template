@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"sync"
 
+	"github.com/Mynoveloper/logger"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 
-	"github.com/Mynor2397/Api-Template/internal/infrastructure/helper"
-	"github.com/Mynoveloper/logger"
+	"github.com/Mynor2397/Api-Template/src/infrastructure/helper"
 )
 
 var (
@@ -17,10 +17,9 @@ var (
 	database *mongo.Database
 )
 
-// Connection return a conection to mongodb
+// Connection return a new conection to specific mongodb database
 func Connection(logger logger.ILogger) *mongo.Database {
 	c := helper.Config()
-	logger.Info(c)
 	once.Do(func() {
 
 		clientOptions := options.Client().ApplyURI(fmt.Sprintf("mongodb://%s:%d", c.Hostdb, c.Portdb))

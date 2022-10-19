@@ -6,8 +6,8 @@ import (
 	"github.com/Mynoveloper/logger"
 	"github.com/joho/godotenv"
 
-	"github.com/Mynor2397/Api-Template/internal/cmd/server"
-	"github.com/Mynor2397/Api-Template/internal/infrastructure/database"
+	"github.com/Mynor2397/Api-Template/cmd/server"
+	"github.com/Mynor2397/Api-Template/src/infrastructure/database"
 )
 
 func main() {

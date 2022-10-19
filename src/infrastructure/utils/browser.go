@@ -7,6 +7,7 @@ import (
 	"runtime"
 )
 
+// OpenBrowser launch browser on the specific url
 func OpenBrowser(url string) {
 	var err error
 
